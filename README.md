@@ -167,7 +167,7 @@ Project Link: [https://github.com/npucino/sandpiper](https://github.com/npucino/
 <!-- Publications -->
 ## Publications
 
-* [Pucino, N. et al. Citizen science for monitoring seasonal-scale beach erosion and behaviour with aerial drones. Sci. Rep. 5, 14745 (2021)](www.nature.com/articles/s41598-021-83477-6)
+* [Pucino, N. et al. Citizen science for monitoring seasonal-scale beach erosion and behaviour with aerial drones. Sci. Rep. 11, 1-19 (2021)](www.nature.com/articles/s41598-021-83477-6)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
