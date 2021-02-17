@@ -117,7 +117,7 @@ Each survey creates Digital Surface Models and orthophotos of considerable size 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
-[Install Conda] in your local machine and use the [sandpiper_env.yml file ](../blob/master/sandpiper_env.yml) to create a suitable environment (will be named "sandpiper_env").
+[Install Conda] in your local machine and use the [sandpiper_env.yml file](https://github.com/npucino/sandpiper/blob/master/sandpiper_env.yml) to create a suitable environment (will be named "sandpiper_env").
 * in the Anaconda Prompt terminal, type:
   ```sh
   conda env create --file sandpiper_env.yml
