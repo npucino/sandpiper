@@ -196,6 +196,7 @@ Project Link: [https://github.com/npucino/sandpiper](https://github.com/npucino/
 
 * [Funding provided by Deakin University and the Victorian Department of Environment, Land, Water and Planning](https://www.marineandcoasts.vic.gov.au/coastal-programs/victorian-coastal-monitoring-program)
 * [Deakin University Citizen Science program webpage](https://www.marinemapping.org/vcmp-citizen-science)
+* [A/Prof Daniel Ierodiaconou](https://www.deakin.edu.au/about-deakin/people/daniel-ierodiaconou), my PhD supervisor and the [Deakin Marine Mapping team](https://www.marinemapping.org/)
 
 
 
