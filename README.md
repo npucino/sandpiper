@@ -104,7 +104,7 @@ Each survey creates Digital Surface Models and orthophotos of considerable size 
 * **.outils**: main storage of useful functions.
 * **.profile**: extract elevation and colour information across profiles from a folder of rasters.
 * **.labels**: use KMean and Silhouette analysis to help clean the extracted elevation data from unwanted non-sand points.
-* **.hotspots**: use Local Moran's I to disscard spatial outliers and obtain significant hot/cold spots of beach change at site and transect levels.
+* **.hotspot**: use Local Moran's I to disscard spatial outliers and obtain significant hot/cold spots of beach change at site and transect levels.
 * **.dynamics**: compute Beachface CLuster Dynamics indices at the site and transect levels.
 * **.volumetrics**: compute volumetric timeseries of sand-only points and create plots.
 * **.space** (under development): simple satellite and UAV instantaneous waterlines tidal-correction and shoreline shifts/error metrics.
@@ -131,16 +131,19 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation (temporary - will be a package in PyPI)
 
-1. Clone the repo inside the environment **sandpiper_env** site-packages folder.
+1. Locate the **site-package** folder inside the sandpiper_env folder created by Conda and clone the repo inside that.
+  
+  >**Example**: C:\conda3\envs\sandpiper_env\Lib\site-packages
+  >
+   Type in conda prompt:
    ```sh
+   cd C:\conda3\envs\sandpiper_env\Lib\site-packages
    git clone https://github.com/npucino/sandpiper.git
    ```
-2. Once you open a Jupyter Notebook in 
+2. Once you open a Jupyter Notebook with the sandpiper_env, import it to test it works.
    ```sh
-   conda install
+   import sandpiper
    ```
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
