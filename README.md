@@ -15,17 +15,18 @@
 
 
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT logo -->
 <br />
 <p align="center">
   <a href="https://github.com/npucino/sandpiper">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/sandpiper1-01.png" alt="Logo" width="50%" height="50%">
   </a>
 
-  <h3 align="center">Sandpiper - automatic UAV-SfM beach volumetric analysis</h3>
+  <h3 align="center">- Tools for automatic UAV-SfM beach volumetric and behavioural analysis -</h3>
 
   <p align="justify">
-    Sandpiper performs an organised and automatic extraction of elevation profiles from as many DSM and orthophotos as you like!
+    Sandpiper performs an organised and automatic extraction of elevation profiles from as many DSM and orthophotos as you like. It is thought to be used when a considerable number of DSMs and orthohpotos from many different locations and coordinate reference systems need to be processed.
+    Then, computes volumetric and behavioural analysis of beachfaces, speeding up an otherwise long and difficult to handle (big rasters) job.
     It has some specialised functions to deal with the common limitations found in beach environments:
   <ol>
     <li>Swash zone: the water motion as waves wash in and out of the swash zone prevent Structure from Motion algorithm to find matches, thus, model elevation.</li>
@@ -33,7 +34,11 @@
     <li>File size: a few km long beach surveyed with a Phantom 4-Advanced at 100m altitude create roughly 10 Gb (uncompressed) of data, which can be cumbersome for some GIS to handle.</li>
   </ol>
   
-  From user-defined cross-shore transects, you can clean profiles from unwanted non-sand points, detect significant hotspots/coldspots (cluster) of beach change, compute     volumetric dynamics at the site and transect levels, plot alongshore change and model beachface behaviour using the Beachface Cluster Dynamics indices.
+  From user-defined cross-shore transects, you can clean profiles from unwanted non-sand points, detect significant hotspots/coldspots (cluster) of beach change, compute       volumetric dynamics at the site and transect levels, plot alongshore change and model beachface behaviour using the Beachface Cluster Dynamics indices.
+  
+  Plus, some outils functions that can come at hand, like automatic transect creation from a vector line, grid creation along a line and subsequent tiles extraction and others.
+  
+  Follow the Jupyter Notebook tutorials (IN PREPARATION) to understand how it works!
   
   >**This code has supported the analysis and publication of the article ["Citizen science for monitoring seasonal-scale beach erosion and behaviour with aerial drones"](https://rdcu.be/cfgvu  "link to paper"), in the open access Nature Scientific Report journal.**
 
