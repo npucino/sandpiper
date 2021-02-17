@@ -199,15 +199,15 @@ Project Link: [https://github.com/npucino/sandpiper](https://github.com/npucino/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/npucino/repo.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/npucino/sandpiper.svg?style=for-the-badge
 [contributors-url]: https://github.com/npucino/sandpiper/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/npucino/repo.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/npucino/sandpiper.svg?style=for-the-badge
 [forks-url]: https://github.com/npucino/sandpiper/network/members
-[stars-shield]: https://img.shields.io/github/stars/npucino/repo.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/npucino/sandpiper.svg?style=for-the-badge
 [stars-url]: https://github.com/npucino/sandpiper/stargazers
-[issues-shield]: https://img.shields.io/github/issues/npucino/repo.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/npucino/sandpiper.svg?style=for-the-badge
 [issues-url]: https://github.com/npucino/sandpiper/issues
-[license-shield]: https://img.shields.io/github/license/npucino/repo.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/npucino/sandpiper.svg?style=for-the-badge
 [license-url]: https://github.com/npucino/sandpiper/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/nicolaspucino/
