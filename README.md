@@ -35,7 +35,7 @@
   
   From user-defined cross-shore transects, you can clean profiles from unwanted non-sand points, detect significant hotspots/coldspots (cluster) of beach change, compute     volumetric dynamics at the site and transect levels, plot alongshore change and model beachface behaviour using the Beachface Cluster Dynamics indices.
   
-  >**This code has supported the analysis and publication of the article ["Citizen science for monitoring seasonal-scale beach erosion and behaviour with aerial drones"](www.nature.com/articles/s41598-021-83477-6 "link to paper"), in the open access Nature Scientific Report journal.**
+  >**This code has supported the analysis and publication of the article ["Citizen science for monitoring seasonal-scale beach erosion and behaviour with aerial drones"](https://rdcu.be/cfgvu  "link to paper"), in the open access Nature Scientific Report journal.**
 
 
   <br />
@@ -184,7 +184,7 @@ Project Link: [https://github.com/npucino/sandpiper](https://github.com/npucino/
 <!-- Publications -->
 ## Publications
 
-* [Pucino, N. et al. Citizen science for monitoring seasonal-scale beach erosion and behaviour with aerial drones. Sci. Rep. 11, 1-19 (2021)](www.nature.com/articles/s41598-021-83477-6)
+* [Pucino, N. et al. Citizen science for monitoring seasonal-scale beach erosion and behaviour with aerial drones. Sci. Rep. 11, 1-19 (2021)](https://rdcu.be/cfgvu)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
