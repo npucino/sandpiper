@@ -15,17 +15,18 @@
 
 
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT logo -->
 <br />
 <p align="center">
   <a href="https://github.com/npucino/sandpiper">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/sandpiper1-01.png" alt="Logo" width="50%" height="50%">
   </a>
 
-  <h3 align="center">Sandpiper - automatic UAV-SfM beach volumetric analysis</h3>
+  <h3 align="center">- Tools for automatic UAV-SfM beach volumetric and behavioural analysis -</h3>
 
   <p align="justify">
-    Sandpiper performs an organised and automatic extraction of elevation profiles from as many DSM and orthophotos as you like!
+    Sandpiper performs an organised and automatic extraction of elevation profiles from as many DSM and orthophotos as you like. It is thought to be used when a considerable number of DSMs and orthohpotos from many different locations and coordinate reference systems need to be processed.
+    Then, computes volumetric and behavioural analysis of beachfaces, speeding up an otherwise long and difficult to handle (big rasters) job.
     It has some specialised functions to deal with the common limitations found in beach environments:
   <ol>
     <li>Swash zone: the water motion as waves wash in and out of the swash zone prevent Structure from Motion algorithm to find matches, thus, model elevation.</li>
@@ -33,7 +34,11 @@
     <li>File size: a few km long beach surveyed with a Phantom 4-Advanced at 100m altitude create roughly 10 Gb (uncompressed) of data, which can be cumbersome for some GIS to handle.</li>
   </ol>
   
-  From user-defined cross-shore transects, you can clean profiles from unwanted non-sand points, detect significant hotspots/coldspots (cluster) of beach change, compute     volumetric dynamics at the site and transect levels, plot alongshore change and model beachface behaviour using the Beachface Cluster Dynamics indices.
+  From user-defined cross-shore transects, you can clean profiles from unwanted non-sand points, detect significant hotspots/coldspots (cluster) of beach change, compute       volumetric dynamics at the site and transect levels, plot alongshore change and model beachface behaviour using the Beachface Cluster Dynamics indices.
+  
+  Plus, some outils functions that can come at hand, like automatic transect creation from a vector line, grid creation along a line and subsequent tiles extraction and others.
+  
+  Follow the Jupyter Notebook tutorials (IN PREPARATION) to understand how it works!
   
   >**This code has supported the analysis and publication of the article ["Citizen science for monitoring seasonal-scale beach erosion and behaviour with aerial drones"](https://rdcu.be/cfgvu  "link to paper"), in the open access Nature Scientific Report journal.**
 
@@ -85,12 +90,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="images/banner3.png" alt="banner" width="100%" height="50%">
 
 <!-- Background -->
 ### Background
 This code has been developed to ease the analysis of big data coming from more than 300 Unnmanned Aerial Vehicles (UAV) surveys, performed by Citizen Scientist in Victoria, Australia. This is the [Eureka Award Winning](https://www.deakin.edu.au/about-deakin/media-releases/articles/eureka-prize-win-for-world-first-citizen-science-program) World-first [beach monitoring program powered by volunteers](https://www.marinemapping.org/vcmp-citizen-science "info on the Citizen Science project"), who autonomously fly UAVs on 15 sensitive sites (erosional hotspots) across the Victorian coast, every 6 weeks for 3 years, since 2018. This project is part of a broader marine mapping program called The [Victorian Coastal Monitoring Program (VCMP)](https://www.marineandcoasts.vic.gov.au/coastal-programs/victorian-coastal-monitoring-program "VCMP website"), funded by the [Victorian Department of Environment, Land, Water and Planning](https://www.delwp.vic.gov.au/ "DELWP website"), co-funded by [Deakin University](https://www.deakin.edu.au/ "Deakin Uni website") and [The University of Melbourne](https://www.unimelb.edu.au/ "UniMelb website").
-***
+
 Each survey creates Digital Surface Models and orthophotos of considerable size (5-10 Gb uncompressed), which can be troublesome for some GIS to render, let alone perform rster-based computations.
 
 <!-- modules -->
@@ -112,7 +117,7 @@ Each survey creates Digital Surface Models and orthophotos of considerable size 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
-[Install Conda] in your local machine and use the [sandpiper_env.yml file ](../blob/master/sandpiper_env.yml) to create a suitable environment (will be named "sandpiper_env").
+[Install Conda] in your local machine and use the [sandpiper_env.yml file](https://github.com/npucino/sandpiper/blob/master/sandpiper_env.yml) to create a suitable environment (will be named "sandpiper_env").
 * in the Anaconda Prompt terminal, type:
   ```sh
   conda env create --file sandpiper_env.yml
@@ -191,6 +196,7 @@ Project Link: [https://github.com/npucino/sandpiper](https://github.com/npucino/
 
 * [Funding provided by Deakin University and the Victorian Department of Environment, Land, Water and Planning](https://www.marineandcoasts.vic.gov.au/coastal-programs/victorian-coastal-monitoring-program)
 * [Deakin University Citizen Science program webpage](https://www.marinemapping.org/vcmp-citizen-science)
+* [A/Prof Daniel Ierodiaconou](https://www.deakin.edu.au/about-deakin/people/daniel-ierodiaconou), my PhD supervisor and the [Deakin Marine Mapping team](https://www.marinemapping.org/)
 
 
 
