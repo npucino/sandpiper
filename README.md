@@ -31,15 +31,21 @@
     <li>Swash zone: the water motion as waves wash in and out of the swash zone prevent Structure from Motion algorithm to find matches, thus, model elevation.</li>
     <li>Vegetation: both dune vegetation and beach wracks (macroalgae, woody debris) should be removed or filetered as can compromise sediment volumetric computation.</li>
     <li>File size: a few km long beach surveyed with a Phantom 4-Advanced at 100m altitude create roughly 10 Gb (uncompressed) of data, which can be cumbersome for some GIS to handle.</li>
-    </ol>
-    <br />
-    <a href="https://github.com/npucino/sandpiper"><strong>Explore the docs »</strong></a>
-    <br />
-    <a href="https://github.com/npucino/sandpiper">View Demo</a>
-    ·
-    <a href="https://github.com/npucino/sandpiper/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/npucino/sandpiper/issues">Request Feature</a>
+  </ol>
+  
+  From user-defined cross-shore transects, you can clean profiles from unwanted non-sand points, detect significant hotspots/coldspots (cluster) of beach change, compute     volumetric dynamics at the site and transect levels, plot alongshore change and model beachface behaviour using the Beachface Cluster Dynamics indices.
+  
+  >**This code has supported the analysis and publication of the article ["Citizen science for monitoring seasonal-scale beach erosion and behaviour with aerial drones"](www.nature.com/articles/s41598-021-83477-6 "link to paper"), in the open access Nature Scientific Report journal.**
+
+
+  <br />
+  <a href="https://github.com/npucino/sandpiper"><strong>Explore the docs »</strong></a>
+  <br />
+  <a href="https://github.com/npucino/sandpiper">View Demo</a>
+  ·
+  <a href="https://github.com/npucino/sandpiper/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/npucino/sandpiper/issues">Request Feature</a>
   </p>
 </p>
 
@@ -52,14 +58,15 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#Background">Background</a></li>
+        <li><a href="#Modules">Modules</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#Installation (temporary - will be a package in PyPI)">Installation (temporary - will be a package in PyPI)</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -80,18 +87,22 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started:
+<!-- Background -->
+### Background
+This code has been developed to ease the analysis of big data coming from more than 300 Unnmanned Aerial Vehicles (UAV) surveys, performed by Citizen Scientist in Victoria, Australia. This is the [Eureka Award Winning](https://www.deakin.edu.au/about-deakin/media-releases/articles/eureka-prize-win-for-world-first-citizen-science-program) World-first [beach monitoring program powered by volunteers](https://www.marinemapping.org/vcmp-citizen-science "info on the Citizen Science project"), who autonomously fly UAVs on 15 sensitive sites (erosional hotspots) across the Victorian coast, every 6 weeks for 3 years, since 2018. This project is part of a broader marine mapping program called The [Victorian Coastal Monitoring Program (VCMP)](https://www.marineandcoasts.vic.gov.au/coastal-programs/victorian-coastal-monitoring-program "VCMP website"), funded by the [Victorian Department of Environment, Land, Water and Planning](https://www.delwp.vic.gov.au/ "DELWP website"), co-funded by [Deakin University](https://www.deakin.edu.au/ "Deakin Uni website") and [The University of Melbourne](https://www.unimelb.edu.au/ "UniMelb website").
+***
+Each survey creates Digital Surface Models and orthophotos of considerable size (5-10 Gb uncompressed), which can be troublesome for some GIS to render, let alone perform rster-based computations.
 
-
+<!-- modules -->
 ### Modules
 
-* .outils: main storage of useful functions.
-* .profile: extract elevation and colour information across profiles from a folder of rasters.
-* .labels: use KMean and Silhouette analysis to help clean the extracted elevation data from unwanted non-sand points.
-* .hotspots: use Local Moran's I to disscard spatial outliers and obtain significant hot/cold spots of beach change at site and transect levels.
-* .dynamics: compute Beachface CLuster Dynamics indices at the site and transect levels.
-* .volumetrics: compute volumetric timeseries of sand-only points and create plots.
-* .space (under development): simple satellite and UAV instantaneous waterlines tidal-correction and error metrics.
+* **.outils**: main storage of useful functions.
+* **.profile**: extract elevation and colour information across profiles from a folder of rasters.
+* **.labels**: use KMean and Silhouette analysis to help clean the extracted elevation data from unwanted non-sand points.
+* **.hotspots**: use Local Moran's I to disscard spatial outliers and obtain significant hot/cold spots of beach change at site and transect levels.
+* **.dynamics**: compute Beachface CLuster Dynamics indices at the site and transect levels.
+* **.volumetrics**: compute volumetric timeseries of sand-only points and create plots.
+* **.space** (under development): simple satellite and UAV instantaneous waterlines tidal-correction and shoreline shifts/error metrics.
 
 
 
@@ -101,19 +112,25 @@ Here's a blank template to get started:
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
-HERE, the Requirments.txt file for COnda will be added.
-* conda
+[Install Conda] in your local machine and use the [sandpiper_env.yml file ](../blob/master/sandpiper_env.yml) to create a suitable environment (will be named "sandpiper_env").
+* in the Anaconda Prompt terminal, type:
   ```sh
-  conda install geopandas
+  conda env create --file sandpiper_env.yml
   ```
+  > The [richdem](https://pypi.org/project/richdem/ "richdem pypi page") package is the only one installed by PIP, which might cause an error.
+  > If this is the case:
+  > 1. Remove the attempted environment `conda remove --name sandpiper_env --all`
+  > 2. Open sandpiper_env.yml and remove **richdem** from the requirement list, but leave **pip**
+  > 3. Re-create the environment with the modified sandpiper_env.yml file `conda env create --file sandpiper_env.yml`
+  > 4. Once created, activate the environment and `pip install richdem`
 
-### Installation
+### Installation (temporary - will be a package in PyPI)
 
-1. Clone the repo
+1. Clone the repo inside the environment **sandpiper_env** site-packages folder.
    ```sh
    git clone https://github.com/npucino/sandpiper.git
    ```
-2. Install Conda packages
+2. Once you open a Jupyter Notebook in 
    ```sh
    conda install
    ```
@@ -172,8 +189,9 @@ Project Link: [https://github.com/npucino/sandpiper](https://github.com/npucino/
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [Deakin University Citizen Science program webpage](https://www.marinemapping.org/vcmp-citizen-science)
 * [Funding provided by Deakin University and the Victorian Department of Environment, Land, Water and Planning](https://www.marineandcoasts.vic.gov.au/coastal-programs/victorian-coastal-monitoring-program)
+* [Deakin University Citizen Science program webpage](https://www.marinemapping.org/vcmp-citizen-science)
+
 
 
 
@@ -193,3 +211,5 @@ Project Link: [https://github.com/npucino/sandpiper](https://github.com/npucino/
 [license-url]: https://github.com/npucino/repo/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/nicolaspucino/
+
+[Install Conda]:https://www.anaconda.com/products/individual "Anaconda download website"
