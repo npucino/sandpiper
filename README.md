@@ -117,17 +117,21 @@ Each survey creates Digital Surface Models and orthophotos of considerable size 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
-[Install Conda] in your local machine and use the [sandpiper_env.yml file](https://github.com/npucino/sandpiper/blob/master/sandpiper_env.yml) to create a suitable environment (will be named "sandpiper_env").
+[Install Conda] in your local machine and use the to create a suitable virtual environment (here named **"sandpiper_env"**).
 * in the Anaconda Prompt terminal, type:
   ```sh
-  conda env create --file sandpiper_env.yml
+  conda create --name sandpiper_env geopandas tqdm pysal scikit-learn scikit-image rasterio scipy seaborn matplotlib
   ```
-  > The [richdem](https://pypi.org/project/richdem/ "richdem pypi page") package is the only one installed by PIP, which might cause an error.
-  > If this is the case:
-  > 1. Remove the attempted environment `conda remove --name sandpiper_env --all`
-  > 2. Open sandpiper_env.yml and remove **richdem** from the requirement list, but leave **pip**
-  > 3. Re-create the environment with the modified sandpiper_env.yml file `conda env create --file sandpiper_env.yml`
-  > 4. Once created, activate the environment and `pip install richdem`
+  
+* then, install Visual Studio 14 package, which is needed to install the [richdem](https://pypi.org/project/richdem/ "richdem pypi page") package.
+```sh
+conda install -c ukoethe visual-studio
+```
+* now, let's PIP install richdem, type:
+ ```sh
+ pip install richdem
+ ```
+ For the exact packages versions, consult the [sandpiper_env.yml file](https://github.com/npucino/sandpiper/blob/master/sandpiper_env.yml).
 
 ### Installation (temporary - will be a package in PyPI)
 
