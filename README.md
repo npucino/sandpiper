@@ -117,17 +117,13 @@ Each survey creates Digital Surface Models and orthophotos of considerable size 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
-[Install Conda] in your local machine and use the to create a suitable virtual environment (here named **"sandpiper_env"**).
-* in the Anaconda Prompt terminal, type:
+* [Install Conda] in your local machine. We need it to create the **"sandpiper_env"** virtual environment.
+* then, if you do not have it already, install **Visual Studio C++ build tools** in your local machine, which is needed to install the [richdem](https://pypi.org/project/richdem/ "richdem pypi page") package. You can download it [here](https://visualstudio.microsoft.com/visual-cpp-build-tools/ "standalone VS c++ build tools").
+* now, in the Anaconda Prompt terminal, create the environment **sandpiper_env** and install the required packages by typing:
   ```sh
   conda create --name sandpiper_env geopandas tqdm pysal scikit-learn scikit-image rasterio scipy seaborn matplotlib
   ```
-  
-* then, install Visual Studio 14 package, which is needed to install the [richdem](https://pypi.org/project/richdem/ "richdem pypi page") package.
-```sh
-conda install -c ukoethe visual-studio
-```
-* now, let's PIP install richdem, type:
+* now, let's PIP install richdem in the newly created environment **sandpiper_env** (ps.: remember to `conda activate sandpiper_env` ). Type:
  ```sh
  pip install richdem
  ```
