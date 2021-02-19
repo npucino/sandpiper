@@ -216,7 +216,7 @@ def extract_loc_date (name,loc_search_dict,split_by="_"):
     Args:
         name (str): the filenames ('C:\\jupyter\\data_in_gcp\\20180601_mar_gcps.csv').
 
-        dictionary_full (dict): a dict where keys are the location codes and values are lists containing the expected full location string (["Warrnambool", "warrnambool","warrny"]).
+        loc_search_dict (dict): a dict where keys are the location codes and values are lists containing the expected full location string (["Warrnambool", "warrnambool","warrny"]).
 
         split_by (str): the character used to split the name (default= '_').
 
@@ -224,20 +224,21 @@ def extract_loc_date (name,loc_search_dict,split_by="_"):
         ('location',raw_date) : tuple with location and raw date.
     """
 
-    list_names=list(loc_search_dict.values()) # get all the full location strings in a list
-
-    names=name.split(split_by) # split the filename based on the provided split_by parameter
-
-    for word in names:
-        for candidate_names in list_names:
-            if word in candidate_names:
-                location_code=(list(loc_search_dict.keys())[list_names.index(candidate_names)]) # if part of the scraped name matches the list of full names, store its code
-            else:
-                pass
-
     date=getDate(name)
+    names=set((os.path.split(name)[-1].split("_")))
 
-    return (location_code, date)
+    for loc_code,raw_strings_loc in zip(loc_search_dict.keys(),list(loc_search_dict.values())): # loop trhough all possible lists of raw strings
+        raw_str_set=set(raw_strings_loc)
+        match=raw_str_set.intersection(names)
+
+        if len(match) == 1:
+
+            location_code_found=loc_code
+
+        else:
+            pass
+
+    return (location_code_found, date)
 
 
 # def nmad(in_series):

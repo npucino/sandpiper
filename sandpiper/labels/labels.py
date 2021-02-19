@@ -212,7 +212,7 @@ def get_opt_k (sil_df, sigma=1):
     si_arr=sil_df.groupby(['location',"survey_date"])["silhouette_mean"].apply(np.array)
     k_arr=sil_df.groupby(['location',"survey_date"])["k"].apply(np.array)
 
-    dict_data={"k_numbers":k_arr,"sil_mean":si_arr}
+    dict_data={"k_numbers":k_arr,"silhouette_mean":si_arr}
     sil_group_df=pd.DataFrame(dict_data)
     sil_group_df=sil_group_df.reset_index()
 
@@ -224,10 +224,10 @@ def get_opt_k (sil_df, sigma=1):
 
         location=sil_group_df.iloc[i].location
         survey_date=sil_group_df.iloc[i].survey_date
-        sub=sil_group_df.loc[i,["k_numbers","sil_mean"]]
+        sub=sil_group_df.loc[i,["k_numbers","silhouette_mean"]]
 
         # Passing a gaussian filter to smooth the curve for 1 std sigma
-        gauss=gaussian_filter(sub.sil_mean, sigma=sigma)
+        gauss=gaussian_filter(sub.silhouette_mean, sigma=sigma)
 
         # obtaining relative minima for the smoothed line (gauss)
         mina=sig.argrelmin(gauss, axis=0, order=1, mode='clip')

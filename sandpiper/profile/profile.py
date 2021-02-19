@@ -51,8 +51,8 @@ def get_elevation(x_coord, y_coord, raster, bands, gt):
 
 
         band=raster.GetRasterBand(1)        # but we stick with classic 1-band DEM image
-        data=band.ReadAsArray(px,py,1,1)    # transform the DEM into an array of one value giving offset
         try:
+            data=band.ReadAsArray(px,py,1,1)    # transform the DEM into an array of one value giving offset
             elevation.append(data[0][0])
         except:
             elevation.append(np.nan)
@@ -200,8 +200,8 @@ def get_dn(x_coord, y_coord, raster, bands, gt):
     for j in range(1,4):                  # we could iterate thru multiple bands
 
         band=raster.GetRasterBand(j)
-        data=band.ReadAsArray(px,py,1,1)
         try:
+            data=band.ReadAsArray(px,py,1,1)
             dn_val.append(data[0][0])
         except:
             dn_val.append(np.nan)
