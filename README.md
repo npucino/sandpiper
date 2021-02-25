@@ -23,7 +23,7 @@
 
   <h3 align="center">- Tools for automatic UAV-SfM beach volumetric and behavioural analysis -</h3>
    
-   # We moved ! Go to [sandPYper](https://github.com/npucino/sandpiper) project.
+   # We moved ! Go to [sandPYper](https://github.com/npucino/sandpyper) project.
   
  
 
